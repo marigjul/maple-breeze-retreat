@@ -13,8 +13,6 @@ This repository contains the source code for our JavaFX application project.
 
 We have created an app that will function as a spa booking page. The app contains functionality where you can write your name and email address, book which treatment you want and which date is suitable for the treatment. All this information gets stored in a json-file and and this information is also saved on a server using our REST API. The server is built with Spring Boot, which processes incoming booking requests and stores the data centrally, allowing easy retrieval and management of all bookings. This setup ensures that bookings are accessible and consistent across different devices or clients interacting with the system.
 
-More information about the app and release 3 in this [Readme.md](booking/docs/release3/readme.md).
-
 ## Functionalities
 **The functionalities in our app as of now**:
 - You input your name and email
