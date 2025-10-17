@@ -1,0 +1,26 @@
+@startuml
+package "booking.ui" {
+    class App
+    class PrimaryController
+    class SecondaryController
+}
+
+package "booking.core" {
+    class Booking
+    class BookingService
+}
+
+package "booking.persistence" {
+    class BookingRepository
+}
+
+package "booking.rest" {
+    class BookingRestService
+}
+
+booking.ui.PrimaryController --> booking.core.BookingService
+booking.ui.PrimaryController --> booking.core.Booking
+booking.ui.SecondaryController --> booking.core.Booking
+booking.core.BookingService --> booking.core.Booking
+booking.persistence.BookingRepository --> booking.core.Booking
+@enduml

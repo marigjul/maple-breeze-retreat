@@ -1,0 +1,13 @@
+[ {
+  "bookingNumber" : 1,
+  "name" : "Helene Selvig",
+  "email" : "helene@mail.com",
+  "treatment" : "Manicure",
+  "date" : "2024-11-22"
+}, {
+  "bookingNumber" : 2,
+  "name" : "MAri g",
+  "email" : "marigjul99@gmail.com",
+  "treatment" : "Manicure",
+  "date" : "2025-10-23"
+} ]

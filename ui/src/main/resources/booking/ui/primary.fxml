@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import necessary JavaFX components -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Layout of the primary page in the booking UI (made using SceneBuilder) -->
+<VBox 
+   fx:id="vboxOne" 
+   alignment="CENTER" 
+   prefHeight="480.0" 
+   prefWidth="680.0" 
+   spacing="20.0" 
+   stylesheets="@style.css" 
+   xmlns="http://javafx.com/javafx/21" 
+   xmlns:fx="http://javafx.com/fxml/1" 
+   fx:controller="booking.ui.PrimaryController">
+
+   <children>
+      <Label fx:id="headingLabel" text="MAPLE BREEZE RETREAT">
+         <font>
+            <Font name="Arial" size="42.0" />
+         </font>
+      </Label>
+
+      <TextField 
+         fx:id="nameLabel" 
+         maxWidth="200.0" 
+         prefWidth="444.0" 
+         promptText="Full name" />
+
+      <TextField 
+         fx:id="emailLabel" 
+         layoutX="230.0" 
+         layoutY="202.0" 
+         maxWidth="200.0" 
+         prefWidth="444.0" 
+         promptText="E-mail" />
+
+      <ComboBox 
+         fx:id="treatmentPicker" 
+         prefWidth="150.0" 
+         promptText="Pick treatment" />
+
+      <DatePicker 
+         fx:id="datePicker" 
+         promptText="Treatment date" />
+
+      <Button 
+         fx:id="orderButton" 
+         onAction="#switchToSecondary" 
+         text="Order" />
+
+      <Label fx:id="invalidInputLabel" />
+   </children>
+   
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

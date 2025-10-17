@@ -1,0 +1,40 @@
+/* Font gets applied to all elements. 
+    Sets the font family to Baskerville with Times New Roman 
+    as a fallback font (for unsupporting browsers) */
+* {
+    -fx-font-family: Baskerville, "Times New Roman", serif;
+}
+
+/* Sets the background of the primary oage */
+#vboxOne {
+    -fx-background-image: url("images/FirstPage.png");
+}
+
+/* Sets the background for the secondary page */
+#vboxTwo {
+    -fx-background-image: url("images/SecondPage.png");
+}
+
+/* Sets the background for the tertiary page */
+#vboxThree {
+    -fx-background-image: url("images/ThirdPage.png");
+}
+
+/* Styling for the button class, which is applied to all buttons in the app */
+.button {
+    -fx-background-color: rgb(215,181,186);
+    -fx-text-fill: rgb(68, 30, 49);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 0,0,3,3); 
+}
+
+.combo-box {
+    -fx-background: white;
+}
+
+#headingLabel {
+    -fx-background-color: rgba(188, 154, 131, 0.8);
+}
+
+#thanksLabel {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+}

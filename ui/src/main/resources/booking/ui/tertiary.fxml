@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import necessary JavaFX components -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Layout of the tertiary page in the booking UI (made using SceneBuilder) -->
+
+<VBox fx:id="vboxThree" alignment="CENTER" prefHeight="480.0" prefWidth="680.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.ui.TertiaryController">
+
+  <children>
+
+
+      <VBox alignment="CENTER" prefHeight="312.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="Receipt" text="Your Booking(s):">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <ListView fx:id="bookingList" prefHeight="188.0" prefWidth="260.0" style="-fx-border-radius: 10;">
+               <VBox.margin>
+                  <Insets left="190.0" right="190.0" top="5.0" />
+               </VBox.margin>
+            </ListView>
+         </children></VBox>
+
+      <Button fx:id="closeButton" onAction="#closeApplication" prefHeight="34.0" prefWidth="153.0" text="Close application">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+   </children> 
+
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

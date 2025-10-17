@@ -1,0 +1,57 @@
+@startuml
+
+package booking.core {
+    class Booking {
+        - String name
+        - String email
+        - String treatment
+        - LocalDate date
+        + getName(): String
+        + getEmail(): String
+        + getTreatment(): String
+        + getDate(): LocalDate
+    }
+
+    class BookingService {
+        - List<Booking> bookings
+        + addBooking(Booking): void
+        + getBookings(): List<Booking>
+    }
+}
+
+package booking.persistence {
+    class BookingRepository {
+        - String filePath
+        + saveBooking(Booking): void
+        + loadBookings(): List<Booking>
+    }
+}
+
+package booking.ui {
+    class App {
+        + start(Stage): void
+    }
+
+    class PrimaryController {
+        - TextField nameField
+        - TextField emailField
+        - ComboBox treatmentComboBox
+        - DatePicker datePicker
+        - Button orderButton
+        + handleOrderAction(): void
+    }
+
+    class SecondaryController {
+        - Label confirmationLabel
+        - Button closeButton
+        + handleCloseAction(): void
+    }
+}
+
+BookingService --> Booking
+BookingRepository --> Booking
+PrimaryController --> BookingService
+PrimaryController --> Booking
+SecondaryController --> Booking
+
+@enduml
